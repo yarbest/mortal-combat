@@ -1,5 +1,6 @@
 @import _reset.scss
 @import blocks/_header
+@import blocks/_film-description
 
 
 @font-face
@@ -17,6 +18,20 @@ body
     font-size: 1.6rem
     font-weight: 500
     background-color: #010202
+    &::after
+        content: ''
+        display: block
+        // border: 1px solid white
+        position: absolute
+        z-index: -1
+        right: 0
+        top: 0
+        width: 53.3vw
+        height: 100vh
+        background-image: url(../img/cover-image.jpg)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center 0
 
 .container
     max-width: 1145px

@@ -120,6 +120,96 @@ h6 {
   border-radius: 50%;
 }
 
+.film-description__body {
+  max-width: 435px;
+  position: fixed;
+  top: 28%;
+  width: 30%;
+}
+
+.film-description__logo {
+  margin-bottom: 18px;
+}
+
+.film-description__tags {
+  margin-bottom: 9px;
+  color: #E5E5E5;
+}
+
+.film-description__year {
+  margin-right: 15px;
+  opacity: 0.4;
+}
+
+.film-description__genre {
+  opacity: 0.4;
+  margin-right: 15px;
+}
+
+.film-description__counry {
+  opacity: 0.4;
+  margin-right: 15px;
+}
+
+.film-description__allowed-age {
+  padding: 0 5px;
+  border: 1px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.film-description__plot {
+  margin-bottom: 36px;
+  font-size: 2.1rem;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.film-description__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.film-description__pre-order {
+  margin-right: 15px;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: #EA6E20;
+}
+
+.film-description__trailer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: #2F2F2F;
+}
+
+.film-description__trailer::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 13px;
+  margin-right: 10px;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 @font-face {
   font-family: "SourceSansPro";
   src: url("../fonts/SourceSansPro-Regular.woff") format("woff"), url("../fonts/SourceSansPro-Regular.ttf") format("truetype");
@@ -136,6 +226,21 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   background-color: #010202;
+}
+
+body::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  width: 53.3vw;
+  height: 100vh;
+  background-image: url(../img/cover-image.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center 0;
 }
 
 .container {
