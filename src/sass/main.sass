@@ -22,7 +22,7 @@ body
     &::after
         content: ''
         display: block
-        // border: 1px solid white
+        border: 1px solid white
         position: absolute
         z-index: -1
         right: 0
@@ -41,5 +41,16 @@ body
 @media ( max-width: 1199px)
     .container
         max-width: 100%
-        padding: 0 20px
+        padding: 0 30px
     
+@media ( max-width: 767px)
+    .container
+        padding: 0 20px
+
+@media ( max-width: 767px)
+    body
+        &::after
+            height: 50vh
+            width: 100vw
+            top: 60vh
+            background-position: center top
