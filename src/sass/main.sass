@@ -1,4 +1,5 @@
 @import _reset.scss
+@import _adaptive_sizes_for_properties
 @import blocks/_header
 @import blocks/_film-description
 
@@ -31,8 +32,14 @@ body
         background-image: url(../img/cover-image.jpg)
         background-repeat: no-repeat
         background-size: contain
-        background-position: center 0
+        background-position: center center
 
 .container
     max-width: 1145px
     margin: 0 auto
+
+@media ( max-width: 1199px)
+    .container
+        max-width: 100%
+        padding: 0 20px
+    

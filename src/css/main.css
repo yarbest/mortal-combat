@@ -97,7 +97,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 55px;
+  padding-top: 58px;
 }
 
 .header__user {
@@ -122,9 +122,8 @@ h6 {
 
 .film-description__body {
   max-width: 435px;
-  position: fixed;
-  top: 28%;
-  width: 30%;
+  padding-top: calc(50px + 150 * ((100vw - 320px) / 825));
+  width: 38%;
 }
 
 .film-description__logo {
@@ -161,7 +160,7 @@ h6 {
 }
 
 .film-description__plot {
-  margin-bottom: 36px;
+  margin-bottom: 38px;
   font-size: 2.1rem;
   line-height: 140%;
   color: #ffffff;
@@ -178,7 +177,7 @@ h6 {
 
 .film-description__pre-order {
   margin-right: 15px;
-  padding: 10px 25px;
+  padding: 11px 25px;
   border-radius: 6px;
   font-size: 1.6rem;
   color: #ffffff;
@@ -192,7 +191,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 25px;
+  padding: 11px 25px;
   border-radius: 6px;
   font-size: 1.6rem;
   color: #ffffff;
@@ -240,10 +239,17 @@ body::after {
   background-image: url(../img/cover-image.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center 0;
+  background-position: center center;
 }
 
 .container {
   max-width: 1145px;
   margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }

@@ -1,0 +1,25 @@
+// размер всего полотна в макете
+$maxwidth: 1440
+// размер контейнера в макете
+$maxWidthContainer: 1145
+// startSize макетный размер
+// minSize минимальный размер на телефоне
+@mixin adaptiv-value($property, $startSize, $minSize, $type) 
+    $addSize: $startSize - $minSize
+    @if $type==1
+        //если размер экрана пользователя меньше контейнера
+        #{$property}: $startSize + px
+        @media (max-width: #{ $maxWidthContainer + px}) 
+            #{$property}: calc(#{$minSize + px} + #{$addSize}* ((100vw - 320px) I/ #{$maxWidthContainer - 320}))
+        
+    @else if $type==2 
+        // если  размер экрана пользователя больше контейнера
+        #{$property }: $startSize + px
+        @media (min-width: #{$maxWidthContainer + px} ) 
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) I/ #{$maxWidthContainer - 320}))
+        
+    @else 
+        //всегда
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+    
+
