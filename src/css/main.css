@@ -291,7 +291,6 @@ body {
 body::after {
   content: '';
   display: block;
-  border: 1px solid white;
   position: absolute;
   z-index: -1;
   right: 0;
