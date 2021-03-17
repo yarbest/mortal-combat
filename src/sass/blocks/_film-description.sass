@@ -2,9 +2,11 @@
     // border: 1px solid #fff
     &__body 
         max-width: 435px
-        // @include adaptiv-value(padding-top, 200, 50, 3)
-        padding-top: 200px
+        @include adaptiv-value(padding-top, 200, 50, 900, 1)
+        // padding-top: 200px
+        // padding-top: calc(33.2vh - 100px)
         // width: 38%
+        padding-bottom: 50px
     &__logo
         margin-bottom: 18px
         max-width: 100%
@@ -60,8 +62,23 @@
             background-repeat: no-repeat
             background-size: contain
     &__icon-play
-        
-@media (max-width: 767px)
+
+  
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px)
+    .film-description 
+        &__body 
+            margin: 0 auto
+        &__year
+            opacity: 1
+        &__genre
+            opacity: 1
+        &__counry
+            opacity: 1
+        &__allowed-age
+            opacity: 1
+            
+
+@media (max-width: 900px)
     .film-description 
         &__body 
             margin: 0 auto

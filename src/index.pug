@@ -9,28 +9,29 @@ html(lang="ru")
     body 
     //- pug -w . -o ./ -P 
     -//
-        header.header
-            .container 
-                .header__body
-                    a.header__logo-wrap(href="#")
-                        img.header__logo(src="img/logo.svg" alt="Логотип")
-                    a.header__user(href="#")
-                        span.header__user-name Артем
-                        img.header__user-photo(src="img/user-photo.jpg" alt="Фото пользователя")
+        .wrapper
+            header.header
+                .container 
+                    .header__body
+                        a.header__logo-wrap(href="#")
+                            img.header__logo(src="img/logo.svg" alt="Логотип")
+                        a.header__user(href="#")
+                            span.header__user-name Артем
+                            img.header__user-photo(src="img/user-photo.jpg" alt="Фото пользователя")
 
-        main.film-description 
-            .container 
-                .film-description__body 
-                    img.film-description__logo(src="img/film-logo.png" alt="Логотип фильма")
-                    .film-description__tags 
-                        span.film-description__year 2021
-                        span.film-description__genre боевик, фэнтези, фантастика
-                        span.film-description__counry США
-                        span.film-description__allowed-age 18+
-                    .film-description__plot Продолжение легендарного фильма из 90-х. Предстоит по-настоящему смертельная битва, где останется только сильнейший
-                    .film-description__buttons 
-                        button.film-description__pre-order Предзаказ фильма
-                        button.film-description__trailer 
-                            span Смотреть трейлер
+            main.film-description 
+                .container 
+                    .film-description__body 
+                        img.film-description__logo(src="img/film-logo.png" alt="Логотип фильма")
+                        .film-description__tags 
+                            span.film-description__year 2021
+                            span.film-description__genre боевик, фэнтези, фантастика
+                            span.film-description__counry США
+                            span.film-description__allowed-age 18+
+                        p.film-description__plot Продолжение легендарного фильма из 90-х. Предстоит по-настоящему смертельная битва, где останется только сильнейший
+                        .film-description__buttons 
+                            button.film-description__pre-order Предзаказ фильма
+                            button.film-description__trailer 
+                                span Смотреть трейлер
 
 

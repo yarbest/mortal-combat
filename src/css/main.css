@@ -123,6 +123,13 @@ h6 {
 .film-description__body {
   max-width: 435px;
   padding-top: 200px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1145px) {
+  .film-description__body {
+    padding-top: calc(50px + 150 * ((100vw - 900px) / 245));
+  }
 }
 
 .film-description__logo {
@@ -209,7 +216,25 @@ h6 {
   background-size: contain;
 }
 
-@media (max-width: 767px) {
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
+  .film-description__body {
+    margin: 0 auto;
+  }
+  .film-description__year {
+    opacity: 1;
+  }
+  .film-description__genre {
+    opacity: 1;
+  }
+  .film-description__counry {
+    opacity: 1;
+  }
+  .film-description__allowed-age {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
   .film-description__body {
     margin: 0 auto;
     padding-top: 50px;
@@ -288,19 +313,13 @@ body {
   background-color: #010202;
 }
 
-body::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 0;
-  width: 53.3vw;
-  height: 100vh;
-  background-image: url(../img/cover-image.jpg);
-  background-repeat: no-repeat;
+.wrapper {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-2.88%, #010202), color-stop(44.9%, rgba(1, 2, 2, 0.2))), url(../img/cover-image.jpg) no-repeat right top;
+  background: -webkit-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat right top;
+  background: -o-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat right top;
+  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat right top;
   background-size: contain;
-  background-position: center center;
 }
 
 .container {
@@ -315,17 +334,12 @@ body::after {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
+  .wrapper {
+    min-height: calc(900px + 1000 * ((100vw - 320px) / 825));
+    background-position: center 550px;
+  }
   .container {
     padding: 0 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  body::after {
-    height: 50vh;
-    width: 100vw;
-    top: 60vh;
-    background-position: center top;
   }
 }
