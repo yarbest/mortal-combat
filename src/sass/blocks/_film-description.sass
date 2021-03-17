@@ -1,10 +1,32 @@
 .film-description 
-    // border: 1px solid #fff
+    border: 10px solid red
+    height: 100vh
     &__body 
-        max-width: 435px
         // @include adaptiv-value(padding-top, 200, 50, 3)
-        padding-top: 200px
+        // padding-top: 200px
         // width: 38%
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__text
+        position: relative
+        z-index: 1
+        max-width: 435px
+        border: 1px solid #fff
+    &__photo
+        // margin-left: auto
+        max-width: 100%
+        border: 1px solid #fff
+        &-wrap
+            display: flex
+            align-items: center
+            position: absolute
+            right: 0
+            top: 0
+            max-width: 53%
+            height: 100vh
+            border: 1px solid #fff
     &__logo
         margin-bottom: 18px
         max-width: 100%
@@ -61,13 +83,21 @@
             background-size: contain
     &__icon-play
         
-@media (max-width: 767px)
+@media (max-width: 991px)
     .film-description 
-        &__body 
+        &__body
+            justify-content: flex-start
+            padding-top: 150px
+        &__text
             margin: 0 auto
-            padding-top: 50px
-        &__plot
-            margin-bottom: 20px
+            margin-bottom: 90px
+        &__photo
+
+            &-wrap
+                position: static
+                max-width: 100vw
+                margin: 0 auto
+
 
 @media (max-width: 480px)
     .film-description 
@@ -98,7 +128,5 @@
             height: 45px
             &::before
                 margin-right: 0
-                // padding: 15px 25px
             span
                 display: none
-            // width: 40px
