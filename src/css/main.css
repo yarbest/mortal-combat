@@ -309,10 +309,10 @@ body {
 
 .wrapper {
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, right top, color-stop(-2.88%, #010202), color-stop(44.9%, rgba(1, 2, 2, 0.2))), url(../img/cover-image.jpg) no-repeat right top;
-  background: -webkit-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat right top;
-  background: -o-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat right top;
-  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat right top;
+  background: -webkit-gradient(linear, left top, right top, from(#010202), color-stop(50%, #010202), color-stop(90%, rgba(1, 2, 2, 0.2)));
+  background: -webkit-linear-gradient(left, #010202 0%, #010202 50%, rgba(1, 2, 2, 0.2) 90%);
+  background: -o-linear-gradient(left, #010202 0%, #010202 50%, rgba(1, 2, 2, 0.2) 90%);
+  background: linear-gradient(90deg, #010202 0%, #010202 50%, rgba(1, 2, 2, 0.2) 90%);
   background-size: contain;
 }
 
@@ -322,10 +322,6 @@ body {
 }
 
 @media (max-width: 1199px) {
-  .wrapper {
-    background-size: 60%;
-    background-position: right top;
-  }
   .container {
     max-width: 100%;
     padding: 0 30px;
@@ -334,6 +330,10 @@ body {
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
   .wrapper {
+    background: -webkit-gradient(linear, left top, right top, color-stop(-2.88%, #010202), color-stop(44.9%, rgba(1, 2, 2, 0.2))), url(../img/cover-image.jpg) no-repeat;
+    background: -webkit-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat;
+    background: -o-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat;
+    background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat;
     background-size: contain;
     background-position: center bottom;
   }
@@ -353,6 +353,9 @@ body {
 }
 
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper .vidbg-container {
+    display: none;
+  }
   .film-description__body {
     margin: 0 auto;
   }
@@ -366,6 +369,10 @@ body {
 
 @media (max-width: 767px) {
   .wrapper {
+    background: -webkit-gradient(linear, left top, right top, color-stop(-2.88%, #010202), color-stop(44.9%, rgba(1, 2, 2, 0.2))), url(../img/cover-image.jpg) no-repeat;
+    background: -webkit-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat;
+    background: -o-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat;
+    background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat;
     background-position: center bottom;
     background-size: 70%;
   }
@@ -381,6 +388,12 @@ body {
 @media (max-width: 767px) and (max-width: 575px) {
   .wrapper {
     padding-bottom: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper .vidbg-container {
+    display: none;
   }
 }
 

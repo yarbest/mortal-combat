@@ -19,23 +19,12 @@ body
     font-size: 1.6rem
     font-weight: 500
     background-color: #010202
-    // &::after
-    //     content: ''
-    //     display: block
-    //     position: absolute
-    //     z-index: -1
-    //     right: 0
-    //     top: 0
-    //     width: 53.3vw
-    //     height: 100vh
-    //     background-image: url(../img/cover-image.jpg)
-    //     background-repeat: no-repeat
-    //     background-size: contain
-    //     background-position: center center
+
+
 
 .wrapper
     min-height: 100vh
-    background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat right top 
+    background: linear-gradient(90deg, #010202 0%, #010202 50%, rgba(1, 2, 2, 0.2) 90%)
     background-size: contain
 .container
     max-width: 1145px
@@ -44,9 +33,9 @@ body
 
 
 @media ( max-width: 1199px)
-    .wrapper
-        background-size: 60%
-        background-position: right top
+    // .wrapper
+        // background-size: 60%
+        // background-position: right top
 
     .container
         max-width: 100%
@@ -57,14 +46,17 @@ body
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px)
     .wrapper
         @include adaptiv-value(padding-bottom, 1250, 900, 1024, 901)
+        background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat
         background-size: contain
         background-position: center bottom
+        & .vidbg-container
+            display: none //прячем видео
+
     .film-description //из другого файла
         &__body 
             margin: 0 auto
 
 
-    
 @media ( max-width: 900px)
     .container
         padding: 0 20px
@@ -72,8 +64,11 @@ body
 @media ( max-width: 767px)
     .wrapper
         @include adaptiv-value(padding-bottom, 650, 500, 767, 575)
+        background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.jpg) no-repeat
         background-position: center bottom
         background-size: 70%
+        & .vidbg-container 
+            display: none   //прячем видео
 
 @media ( max-width: 575px)
     .wrapper
