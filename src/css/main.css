@@ -126,9 +126,16 @@ h6 {
   padding-bottom: 50px;
 }
 
-@media (max-width: 1145px) {
+@media (max-width: 1199px) {
   .film-description__body {
-    padding-top: calc(50px + 150 * ((100vw - 900px) / 245));
+    padding-top: 200px;
+    padding-top: calc(50px + 150 * ((100vw - 767px) / 432));
+  }
+}
+
+@media (max-width: 767px) {
+  .film-description__body {
+    padding-top: 50px;
   }
 }
 
@@ -216,31 +223,15 @@ h6 {
   background-size: contain;
 }
 
-@media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
-  .film-description__body {
-    margin: 0 auto;
-  }
-  .film-description__year {
-    opacity: 1;
-  }
-  .film-description__genre {
-    opacity: 1;
-  }
-  .film-description__counry {
-    opacity: 1;
-  }
-  .film-description__allowed-age {
-    opacity: 1;
+@media (max-width: 900px) {
+  .film-description__plot {
+    margin-bottom: 20px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
   .film-description__body {
     margin: 0 auto;
-    padding-top: 50px;
-  }
-  .film-description__plot {
-    margin-bottom: 20px;
   }
 }
 
@@ -272,6 +263,9 @@ h6 {
   }
   .film-description__allowed-age {
     margin-bottom: 10px;
+  }
+  .film-description__plot {
+    font-size: 1.6rem;
   }
   .film-description__trailer {
     display: -webkit-box;
@@ -328,18 +322,83 @@ body {
 }
 
 @media (max-width: 1199px) {
+  .wrapper {
+    background-size: 60%;
+    background-position: right top;
+  }
   .container {
     max-width: 100%;
     padding: 0 30px;
   }
 }
 
-@media (max-width: 900px) {
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
   .wrapper {
-    min-height: calc(900px + 1000 * ((100vw - 320px) / 825));
-    background-position: center 550px;
+    background-size: contain;
+    background-position: center bottom;
   }
+}
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) and (max-width: 1024px) {
+  .wrapper {
+    padding-bottom: 1250px;
+    padding-bottom: calc(900px + 350 * ((100vw - 901px) / 123));
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) and (max-width: 901px) {
+  .wrapper {
+    padding-bottom: 900px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
+  .film-description__body {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
   .container {
     padding: 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    background-position: center bottom;
+    background-size: 70%;
+  }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+  .wrapper {
+    padding-bottom: 650px;
+    padding-bottom: calc(500px + 150 * ((100vw - 575px) / 192));
+  }
+}
+
+@media (max-width: 767px) and (max-width: 575px) {
+  .wrapper {
+    padding-bottom: 500px;
+  }
+}
+
+@media (max-width: 575px) {
+  .wrapper {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 575px) and (max-width: 575px) {
+  .wrapper {
+    padding-bottom: 700px;
+    padding-bottom: calc(400px + 300 * ((100vw - 320px) / 255));
+  }
+}
+
+@media (max-width: 575px) and (max-width: 320px) {
+  .wrapper {
+    padding-bottom: 400px;
   }
 }
