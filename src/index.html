@@ -28,11 +28,19 @@
       </div>
     </main>
   </div>
-  <div class="modal-preorder"></div>
+  <div class="modal-preorder">
+    <div class="modal-preorder__block">
+      <form class="modal-preorder__form"><span class="modal-preorder__text">Заполните email, чтобы получить уведомлние, когда фильм появится в наличии</span>
+        <input class="modal-preorder__email" placeholder="Введите ваш email">
+        <button class="modal-preorder__submit" type="submit">Подписаться </button>
+      </form>
+      <button class="modal-preorder__btn-close modal-btn-close"></button>
+    </div>
+  </div>
   <div class="modal-trailer">
     <div class="modal-trailer__block">
       <iframe id="Youtube" src="https://www.youtube.com/embed/V2LT1qwofzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <button class="modal-trailer__btn-close"></button>
+      <button class="modal-trailer__btn-close modal-btn-close"></button>
     </div>
   </div>
   <script src="js/vidbg.js"></script>

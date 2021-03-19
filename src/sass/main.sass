@@ -33,6 +33,32 @@ body
     background-size: 50% !important
     background-position: right top !important
 
+
+.modal-btn-close
+    position: relative
+    width: 40px
+    height: 40px
+    margin-top: -40px
+    background-color: transparent
+    &::before
+        content: ''
+        position: absolute
+        width: 3px
+        height: 100%
+        left: 46%
+        top: 0
+        background-color: #fff
+        transform: rotate(45deg)
+    &::after
+        content: ''
+        position: absolute
+        width: 3px
+        height: 100%
+        right: 45%
+        top: 0
+        background-color: #fff
+        transform: rotate(-45deg)
+
 .modal-trailer
     display: none
     position: fixed
@@ -49,7 +75,6 @@ body
         width: 600px
         height: 320px
 
-
     &.active
         display: flex
     
@@ -58,31 +83,53 @@ body
         align-items: flex-start
     
     &__btn-close
-        position: relative
-        width: 40px
-        height: 40px
-        background-color: transparent
-        &::before
-            content: ''
-            position: absolute
-            width: 3px
-            height: 100%
-            left: 46%
-            top: 0
-            background-color: #fff
-            transform: rotate(45deg)
-        
-        &::after
-            content: ''
-            position: absolute
-            width: 3px
-            height: 100%
-            right: 45%
-            top: 0
-            background-color: #fff
-            transform: rotate(-45deg)
 
-@media ( max-width: 1199px)
+.modal-preorder
+    display: none
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+
+    align-items: center
+    justify-content: center
+    background-color: #0000005d
+
+    &.active
+        display: flex
+    &__block
+        display: flex
+        position: relative
+    &__form
+        @include adaptiv-value(width, 600, 300, 1980, 320)
+        @include adaptiv-value(padding, 60, 20, 1980, 320)
+        @include adaptiv-value(font-size, 24, 16, 1980, 320)
+
+        display: flex
+        flex-direction: column
+        border-radius: 6px
+        background-color: #fff
+    &__btn-close
+        
+    &__text
+        @include adaptiv-value(margin-bottom, 24, 16, 1980, 320)
+    &__email
+        padding: 5px 10px
+        @include adaptiv-value(margin-bottom, 24, 16, 1980, 320)
+        @include adaptiv-value(font-size, 24, 16, 1980, 320)
+        border: 1px solid lightgray
+        border-radius: 6px
+        &:focus
+            border: 1px solid #EA6E20
+    &__submit
+        background-color: #EA6E20
+        padding: 10px 20px
+        color: #fff 
+        border-radius: 6px
+        font-size: 1.6rem
+
+@media (max-width: 1199px)
     .container
         max-width: 100%
         padding: 0 30px
@@ -118,6 +165,7 @@ body
         &__block
             flex-direction: column
         &__btn-close
+            margin-top: 0
             align-self: flex-end
             order: -1
         iframe
@@ -128,3 +176,15 @@ body
     .wrapper
         @include adaptiv-value(padding-bottom, 700, 400, 575, 320)
         background-size: contain
+
+@media ( max-width: 480px)
+
+    .modal-preorder
+        &__block
+            flex-direction: column
+        &__btn-close
+            order: -1
+            align-self: flex-end
+
+    .modal-btn-close
+        margin-top: 0

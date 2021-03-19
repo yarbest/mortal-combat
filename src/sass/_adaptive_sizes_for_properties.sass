@@ -1,7 +1,7 @@
 @mixin adaptiv-value($property, $startSize, $minSize, $startWindowSize, $minWindowSize) 
     $addSize: $startSize - $minSize
+    #{$property}: $startSize + px
     @media (max-width: #{ $startWindowSize + px}) 
-        #{$property}: $startSize + px
         #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWindowSize + px}) / #{$startWindowSize - $minWindowSize}))
     
     //чтобы меньше минимального значения не уменьшалось

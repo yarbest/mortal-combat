@@ -34,11 +34,19 @@ html(lang="ru")
                             button.film-description__pre-order Предзаказ фильма
                             button.film-description__trailer 
                                 span Смотреть трейлер
+        
         .modal-preorder
+            .modal-preorder__block
+                form.modal-preorder__form
+                    span.modal-preorder__text Заполните email, чтобы получить уведомлние, когда фильм появится в наличии
+                    input.modal-preorder__email(placeholder="Введите ваш email")
+                    button.modal-preorder__submit(type="submit") Подписаться 
+                button.modal-preorder__btn-close.modal-btn-close
+
         .modal-trailer
             .modal-trailer__block
                 iframe(id="Youtube" src="https://www.youtube.com/embed/V2LT1qwofzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-                button.modal-trailer__btn-close
+                button.modal-trailer__btn-close.modal-btn-close
 
         script(src="js/vidbg.js")
         script(src="js/main.js")  
