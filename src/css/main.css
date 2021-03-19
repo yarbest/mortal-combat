@@ -326,6 +326,75 @@ body {
   background-position: right top !important;
 }
 
+.modal-trailer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0000005d;
+}
+
+.modal-trailer iframe {
+  width: 600px;
+  height: 320px;
+}
+
+.modal-trailer.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-trailer__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.modal-trailer__btn-close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.modal-trailer__btn-close::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  left: 46%;
+  top: 0;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal-trailer__btn-close::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  right: 45%;
+  top: 0;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 @media (max-width: 1199px) {
   .container {
     max-width: 100%;
@@ -399,6 +468,23 @@ body {
 @media (max-width: 767px) {
   .wrapper .vidbg-container {
     display: none;
+  }
+  .modal-trailer__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal-trailer__btn-close {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .modal-trailer iframe {
+    width: 100vw;
+    height: 56vw;
   }
 }
 

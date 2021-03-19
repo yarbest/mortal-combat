@@ -3,7 +3,6 @@
 @import blocks/_header
 @import blocks/_film-description
 
-
 @font-face
     font-family: "SourceSansPro"
     src: url("../fonts/SourceSansPro-Regular.woff") format("woff"), 
@@ -20,28 +19,73 @@ body
     font-weight: 500
     background-color: #010202
 
-
-
 .wrapper
     min-height: 100vh
     background: linear-gradient(90deg, #010202 0%, #010202 45%, rgba(1, 2, 2, 0.2) 90%)
     background-size: contain
+
 .container
     max-width: 1145px
     margin: 0 auto
 
-//эти стили будет видно, если видео не загрузится
+//эти стили для запасного постера будет видно, если видеофон не загрузится
 .vidbg-container
     background-size: 50% !important
     background-position: right top !important
 
+.modal-trailer
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    align-items: center
+    justify-content: center
+    background-color: #0000005d
+
+    iframe
+        width: 600px
+        height: 320px
+
+
+    &.active
+        display: flex
+    
+    &__block
+        display: flex
+        align-items: flex-start
+    
+    &__btn-close
+        position: relative
+        width: 40px
+        height: 40px
+        background-color: transparent
+        &::before
+            content: ''
+            position: absolute
+            width: 3px
+            height: 100%
+            left: 46%
+            top: 0
+            background-color: #fff
+            transform: rotate(45deg)
+        
+        &::after
+            content: ''
+            position: absolute
+            width: 3px
+            height: 100%
+            right: 45%
+            top: 0
+            background-color: #fff
+            transform: rotate(-45deg)
+
 @media ( max-width: 1199px)
-
-
     .container
         max-width: 100%
         padding: 0 30px
-
 
 //для для планшетов в ВЕРТИКАЛЬНОМ режиме
 @media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px)
@@ -57,7 +101,6 @@ body
         &__body 
             margin: 0 auto
 
-
 @media ( max-width: 900px)
     .container
         padding: 0 20px
@@ -70,6 +113,16 @@ body
         background-size: 70%
         & .vidbg-container 
             display: none   //прячем видео
+
+    .modal-trailer
+        &__block
+            flex-direction: column
+        &__btn-close
+            align-self: flex-end
+            order: -1
+        iframe
+            width: 100vw
+            height: 56vw
 
 @media ( max-width: 575px)
     .wrapper
